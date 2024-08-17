@@ -19,6 +19,18 @@ console.log(defaultBook); // Output: { title: 'The Great Gatsby', author: 'F. Sc
 // - species: 'Dog'
 // - age: 2
 
+function createPet() {
+  return {
+    name: "Buddy",
+    species: "Dog",
+    age: 2
+  };
+}
+ 
+console.log("Todo 1: Factory Function with Default Properties");
+const defaultPet = createPet();
+console.log(defaultPet);
+
 
 // Example 2: Factory Function with Default Properties
 function createCar() {

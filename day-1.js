@@ -19,6 +19,18 @@ console.log(book.pages);  // Output: 281
 // `title` (string), `director` (string), `year` (number)
 // Log each property using dot notation.
 
+const movie = {
+  title: "Don't Tell Mom the Babysitter's Dead",
+  director: "Stephen Herek",
+  year: 1991
+};
+
+console.log("Todo:1 Movie Object");
+console.log(movie.title); //Output: Don't Tell Mo the Babysitter"s Dead
+console.log(movie.director);//Output: Stephen Herek
+console.log(movie.year);//Output: 1991
+
+
 
 // Example 2: Creating a Pet Object
 const pet = {
@@ -37,6 +49,16 @@ console.log(pet.age);     // Output: 5
 // `name` (string), `population` (number), `country` (string)
 // Log each property using dot notation.
 
+const city ={
+  name: "San Pedro",
+  population: 11770,
+  country: "Belize",
+};
+
+console.log("Todo 2: City Object");
+console.log(city.name); //Output: San Pedro
+console.log(city.population); //Output:11770
+console.log(city.country); //Output: Belize
 
 // Example 3: Creating a Car Object
 const car = {
@@ -54,6 +76,16 @@ console.log(car.year);   // Output: 2021
 // Create an object named `computer` with the following properties:
 // `brand` (string), `processor` (string), `ram` (number)
 // Log each property using dot notation.
+
+const computer = {
+  brand: "Apple",
+  processor: "M3",
+  ram: 8,//number is in GB
+}
+
+console.log(computer.brand); //Output: Apple
+console.log(computer.processor); //Output: M3
+console.log(computer.ram); //Output: 8
 
 
 // Example 4: Creating a Product Object
@@ -73,6 +105,17 @@ console.log(product.inStock); // Output: true
 // `name` (string), `type` (string), `rating` (number)
 // Log each property using dot notation.
 
+const restaurant = {
+  name: "The Ruby Slipper",
+  type: "Breakfast",
+  rating: 4.5
+}
+
+console.log("\nTodo 4:Restaurant Object");
+console.log(restaurant.name);//Output: The Rubby Slipper
+console.log(restaurant.type); //Output: Breakfast
+console.log(restaurant.rating); //Output: 4.5
+
 
 // Example 5: Creating a Student Object
 const student = {
@@ -91,3 +134,12 @@ console.log(student.grade);     // Output: A
 // `address` (string), `size` (number), `hasGarage` (boolean)
 // Log each property using dot notation.
 
+const house = {
+  address:"204 NW Bellflower St",
+  size: 1587,//size in square feet
+  hasGarage: true
+};
+
+console.log(house.address);    // Output "204 NW Bellflower St"
+console.log(house.size);       // Output 1587
+console.log(house.hasGarage);  // Output true
