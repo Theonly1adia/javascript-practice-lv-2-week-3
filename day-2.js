@@ -26,6 +26,24 @@ console.log(book.pages); // Output: 300
 // Add another method named `updateYear` that updates the `year` property.
 // Use `this` to access and modify the properties.
 
+const movie = {
+  title: "Don't Tell Mom the Babysitter's Dead",
+  director: "Stephen Herek",
+  year: 1991,
+  watch() {
+    console.log(`You watched ${movie.title}.`);
+  },
+  updateYear(newYear) {
+    movie.year = newYear;
+  }
+};
+
+console.log("Todo 1: Movie Object");
+movie.watch(); //Output: "You watched Don't Tell Mom the Babysitter's Dead."
+console.log(movie.year); //Output: 1991
+movie.updateYear(1992); // Updates the year to 1992
+console.log(movie.year); //Output: 1992
+
 
 // Example 2: Adding Methods to a Pet Object
 const pet = {
@@ -50,7 +68,25 @@ console.log(pet.name);  // Output: Paws
 // Add a method named `addPopulation` that increases the `population` property by a given number.
 // Add another method named `rename` that updates the `name` property using `this`.
 
+const city ={
+  name: "San Pedro",
+  population: 11770,
+  country: "Belize",
 
+  addPopulation(){
+    this.population += 2000;
+    console.log(`${this.name}'s population increased to ${this.population}. `)
+  },
+  rename(newName){
+    this.rename = newName;
+    console.log(`The new city will be called ${newName}`)
+  }
+};
+
+console.log("\Todo 2: City Object");
+city.addPopulation();
+city.rename("Santa Theresa");
+console.log(city.name);
 // Example 3: Adding Methods to a Car Object
 const car = {
   brand: 'Toyota',
