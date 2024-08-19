@@ -109,6 +109,25 @@ console.log(car.year); // Output: 2023
 // Add a method named `upgradeRAM` that updates the `ram` property.
 // Add another method named `describe` that logs a message with the `brand`, `processor`, and `ram` properties.
 
+const computer = {
+  brand: "Apple",
+  processor: "M3",
+  ram: 8,//number is in GB
+
+  upgradeRam(newRam) {
+    this.ram = newRam;
+    console.log(`The PC's Ram was upgraded to ${newRam}`)
+  },
+
+  describe() {
+    console.log(`This PC is an ${this.brand} ${this.processor} ${this.ram}`)
+  }
+}
+
+console.log("Todo 3: Computer Object");
+computer.describe();
+computer.upgradeRam(12);
+computer.describe();
 
  // Example 4: Adding Methods to a Product Object
 const product = {
@@ -134,6 +153,31 @@ console.log(product.inStock); // Output: false
 // Add a method named `changeRating` that updates the `rating` property.
 // Add another method named `reopen` that sets the `inStock` property to true.
 
+const restaurant = {
+  name: "The Ruby Slipper",
+  type: "Breakfast",
+  rating: 4.5,
+
+  changeRating(newRating) {
+    this.rating = newRating;
+    console.log(`${this.name} rating has improved!`)
+  },
+
+  describe() {
+    console.log(`${this.name}'s new rating is ${this.rating}`)
+  },
+
+  reopen() {
+    this.instock = true;
+    console.log(`${this.name} is now open.`)
+  }
+};
+
+console.log("Todo 4: Restaurant Object");
+restaurant.changeRating(4.7);
+restaurant.describe();
+restaurant.reopen();
+
 
 // Example 5: Adding Methods to a Student Object
 const student = {
@@ -157,3 +201,27 @@ console.log(student.fullName()); // Output: John Doe
 // Add a method named `renovate` that increases the `size` property by a given number.
 // Add another method named `changeAddress` that updates the `address` property.
 
+const house = {
+  address:"204 NW Bellflower St",
+  size: 1587,//size in square feet
+  hasGarage: true,
+
+  renovate() {
+    this.size += 500; 
+    console.log(`The house at ${this.address} has increased in size!`)
+  },
+
+  describe() {
+    console.log(`This house is located at ${this.address}. And the size of the house is now ${this.size}.`)
+  },
+
+  changeAddress() {
+    this.address = newAddress;
+    console.log("The address was updated.")
+  }
+};
+
+console.log("Todo 5: House Object");
+house.renovate(500);
+house.describe();
+house.changeAddress("208 NW Bellflower St");
