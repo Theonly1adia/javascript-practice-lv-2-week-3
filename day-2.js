@@ -206,16 +206,16 @@ const house = {
   size: 1587,//size in square feet
   hasGarage: true,
 
-  renovate() {
-    this.size += 500; 
+  renovate(additionalSize) {
+    this.size += additionalSize; 
     console.log(`The house at ${this.address} has increased in size!`)
   },
 
   describe() {
-    console.log(`This house is located at ${this.address}. And the size of the house is now ${this.size}.`)
+    console.log(`The house located at ${this.address} is now ${this.size}.`)
   },
 
-  changeAddress() {
+  changeAddress(newAddress) {
     this.address = newAddress;
     console.log("The address was updated.")
   }
@@ -225,3 +225,4 @@ console.log("Todo 5: House Object");
 house.renovate(500);
 house.describe();
 house.changeAddress("208 NW Bellflower St");
+house.describe();
