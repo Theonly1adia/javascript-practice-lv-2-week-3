@@ -51,6 +51,18 @@ console.log(defaultCar); // Output: { brand: 'Toyota', model: 'Corolla', year: 2
 // - population: 30000
 // - country: 'USA'
 
+function createCity() {
+  return {
+    name: "Springfield",
+    population: 30000,
+    country: "USA"
+  };
+}
+
+console.log("Todo: Create City Factory Function");
+const defaultCity = createCity();
+console.log(defaultCity);
+
 
 // Example 3: Factory Function with Arguments
 function createBookWithDetails(title, author, pages) {
@@ -70,6 +82,18 @@ console.log(specificBook); // Output: { title: '1984', author: 'George Orwell', 
 // - name
 // - species
 // - age
+
+function createPetWithDetails(name, species, age) {
+  return {
+    name: name,
+    species: species,
+    age: age
+  };
+}
+
+console.log("Todo: Create Pet Factory Function");
+const defaultPetWithDetails = createPetWithDetails('Tchoups', 'Dog', 3);
+console.log(defaultPetWithDetails);
 
 
 // Example 4: Factory Function with Arguments
@@ -91,6 +115,17 @@ console.log(specificCar); // Output: { brand: 'Tesla', model: 'Model S', year: 2
 // - population
 // - country
 
+function createCityWithDetails(name, population, country) {
+  return {
+    name: name,
+    population: population,
+    country: country
+  };
+}
+
+console.log("Todo: Create City Factory Function with Arguments");
+const defaultCityWithDetails = createCityWithDetails( 'New Orleans', 384000, 'USA');
+console.log(defaultCityWithDetails);
 
 // Example 5: Factory Function with Method
 function createPetWithMethod(name, species, age) {
@@ -116,3 +151,19 @@ myPet.celebrateBirthday(); // Output: Happy Birthday Bella! You are now 5 years 
 // - country
 // Add a method named `changePopulation` that takes a number as an argument and updates the `population` property.
 
+function createCityWithMethod(name, population, country) {
+  return {
+    name: name,
+    population: population,
+    country: country,
+
+    changePopulation(newPopulation) {
+      this.population = newPopulation;
+    }
+  };
+}
+
+console.log("Todo: Create City Factory Function with Arguments");
+const city = createCityWithMethod( 'New Orleans', 384000, 'USA');
+city.changePopulation(400000);
+console.log(`Updated City: ${city.name}, Population: ${city.population}, Country: ${city.country}`)
