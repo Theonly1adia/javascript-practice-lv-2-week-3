@@ -22,6 +22,9 @@ const songs = [];
 
 // Example: 
 songs.push(createSong('Yesterday', 'The Beatles', 1965));
+songs.push(createSong('What a Wonderful World','Louis Armstrong',1967));
+songs.push(createSong('Over the Rainbow', 'Judy Garland', 1939));
+songs.push(createSong('Imagine', 'John Lennon', 1971));
 
 console.table(songs);
 
@@ -35,6 +38,8 @@ console.log("\nExample 2: Accessing Objects in the Array");
 
 // Example
 console.log("First song: Title = " + songs[0].title + ", Artist = " + songs[0].artist);
+console.log(songs[1].artist, songs[1].year);
+console.log(songs[2].title, songs[2].year);
 // TODO: Access and log the details of the rest of the songs in the array
 
 console.log("\nExample 3: Adding More Songs");
@@ -47,6 +52,9 @@ console.log("\nExample 3: Adding More Songs");
 songs.push(createSong('My Way', 'Frank Sinatra', 1969));
 songs.push(createSong('Imagine', 'John Lennon', 1971));
 // TODO 3: Add two songs more of your own
+
+songs.push(createSong('Jailhouse Rock', 'Elvis Presley', 1960));
+songs.push(createSong('Square Biz', 'Teena Marie', 1981));
 
 console.table(songs);
 
@@ -65,6 +73,10 @@ console.log("Fourth song: Title = " + songs[3].title + ", Artist = " + songs[3].
 // Modify the details of the fifth song
 // - Artist and year of the fifth song
 
+songs[4].artist = "The Beatles";
+songs[4].year = 1965;
+
+console.log("Fifth song: Title = " + songs[4].title + ", Artist = " + songs[4].artist + ", Year = " + songs[4].year);
 
 
 console.log("\nExample 5: Modifying the Array");
@@ -80,4 +92,10 @@ songs[0] = createSong('Eleanor Rigby', 'The Beatles', 1966);
 console.log("Updated first song: Title = " + songs[0].title + ", Artist = " + songs[0].artist + ", Year = " + songs[0].year);
 
 // TODO 5: Completely Replace the details of the second song.
+
+
+songs[1] = createSong('Bohemian Rhapsody', 'Queen', 1975);
+
+console.log("Updated second song: Title = " + songs[1].title + ", Artist = " + songs[1].artist + ", Year = " + songs[1].year);
+
 
